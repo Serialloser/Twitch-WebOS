@@ -1,3 +1,21 @@
 [submodule "enyo"]
 	path = enyo
 	url = https://github.com/enyojs/enyo.git
+[submodule "lib/enyo-cordova"]
+	path = lib/enyo-cordova
+	url = https://github.com/enyojs/enyo-cordova.git
+[submodule "lib/enyo-ilib"]
+	path = lib/enyo-ilib
+	url = https://github.com/enyojs/enyo-ilib.git
+[submodule "lib/enyo-webos"]
+	path = lib/enyo-webos
+	url = https://github.com/enyojs/enyo-webos.git
+[submodule "lib/layout"]
+	path = lib/layout
+	url = https://github.com/enyojs/layout.git
+[submodule "lib/moonstone"]
+	path = lib/moonstone
+	url = https://github.com/enyojs/moonstone.git
+[submodule "lib/spotlight"]
+	path = lib/spotlight
+	url = https://github.com/enyojs/spotlight.git

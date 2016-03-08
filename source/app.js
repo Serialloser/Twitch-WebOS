@@ -5,11 +5,11 @@
 */
 
 enyo.kind({
-	name: "myapp.Application",
+	name: "twitch.Application",
 	kind: "enyo.Application",
-	view: "myapp.MainView"
+	view: "twitch.MainView"
 });
 
 enyo.ready(function () {
-	new myapp.Application({name: "app"});
+	new twitch.Application({name: "app"});
 });

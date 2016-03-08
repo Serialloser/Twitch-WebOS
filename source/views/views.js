@@ -5,7 +5,7 @@
 */
 
 enyo.kind({
-	name: "myapp.MainView",
+	name: "twitch.MainView",
 	kind: "moon.Panels",
 	classes: "moon enyo-fit main-view",
 	pattern:"activity",

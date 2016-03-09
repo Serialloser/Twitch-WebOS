@@ -1,13 +1,16 @@
 enyo.kind({
   name: "twitch.TwitchRemoteCollection",
   kind: "enyo.Collection",
-  source: "twitchApi",
+  source: "twitchApi",  
   options: { parse: true },  
-  fetch: function (opts) {                
+
+  fetch: function (opts, cb) {
+    console.log(opts);
+    console.log(cb);  
     return this.inherited(arguments);
   },
 
-  parse: function(data) {
+  parse: function(data) {    
     return data && data.streams;
   },
 
@@ -17,5 +20,5 @@ enyo.kind({
     opts.params.offset = opts.offset || this.length;
     opts.params.limit = count || 36;
     this.fetch(opts);
-  },  
+  },    
 });

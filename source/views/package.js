@@ -1,3 +1,7 @@
 enyo.depends(
-	"views.js"
+	"AutoFetchingDataGridList.js",
+	"GamesDataGridList.js",
+	"DataGridListWrapper.js",
+	"GamesPanel.js",
+	"MainView.js"
 );

@@ -3,20 +3,20 @@
 enyo.kind({
     name: "twitch.GameModel",
     kind: "enyo.Model",
+    options: { parse: true },
     readOnly: true,
-    attributes: {
-        viewersOnGameText: function() {
-            return this.get("viewers").toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " viewers";
-        }
-    },
-    computed: {
-        viewersOnGameText: ["viewers"]
-    },
+    computed: [
+        {method: "formatViewers", path: ["viewers"]},        
+    ],
+    formatViewers: function() {
+        return this.get("viewers").toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " viewers";
+    },    
     parse: function(data) {
-        return {
-            preview: data.game.box.large,
-            name: data.game.name,
-            viewers: data.viewers
-        };
+        model = {};        
+        model.preview = data.game.box.large;
+        model.name = data.game.name;
+        model.viewers = data.viewers;
+
+        return model;
     }
 });

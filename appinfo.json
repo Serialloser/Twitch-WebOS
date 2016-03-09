@@ -1,0 +1,14 @@
+{
+    "id": "com.serialloser.app.twitchunoffical",
+    "version": "0.1.1",
+    "vendor": "serialloser",
+    "type": "web",
+    "main": "index.html",
+    "title": "Twitch(Unofficial)",
+    "icon": "icon.png",
+    "largeIcon": "largeIcon.png",
+    "uiRevision": 2,
+    "enyoVersion": "2.3",
+    "bgImage": "background.png",
+    "splashBackground": "splash.png"
+}

@@ -4,9 +4,7 @@ enyo.kind({
   source: "twitchApi",  
   options: { parse: true },  
 
-  fetch: function (opts, cb) {
-    console.log(opts);
-    console.log(cb);  
+  fetch: function (opts, cb) {    
     return this.inherited(arguments);
   },
 

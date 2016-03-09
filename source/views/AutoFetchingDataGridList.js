@@ -23,7 +23,7 @@ enyo.kind({
         this.get("collection").fetchNextItems();        
     },
     clearData: function() {
-        this.get("collection").destroyAll();
+        this.get("collection").empty();
     },    
     modelsAdded: function() {
         this.inherited(arguments);

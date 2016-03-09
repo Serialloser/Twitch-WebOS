@@ -13,7 +13,7 @@ enyo.kind({
     name: "twitch.GamesDataGridListWrapper",
     kind: "twitch.DataGridListWrapper",
     events: {
-        onGameSelected: ""
+        onShowChannels: ""
     },
     published: {
         games: null
@@ -31,6 +31,32 @@ enyo.kind({
         ]},        
     ],
     itemSelected: function(inSender, inEvent) {
-        this.doGameSelected({ game: inEvent.model });
+        this.doShowChannels({ game: inEvent.model });
     }
+});
+
+enyo.kind({
+    name: "twitch.ChannelsDataGridListWrapper",
+    kind: "twitch.DataGridListWrapper",
+    // events: {
+    //     onGameSelected: ""
+    // },
+    published: {
+        channels: null
+    },
+    bindings: [
+        {from: "channels", to: "$.grid.collection"},
+        {from: "channels.status", to:"$.spinner.showing", transform: function(value) {
+            return this.channels.isBusy();
+        }}        
+    ],
+    components: [
+        {classes: "absolute-container", components: [
+            {name: "grid", kind: "twitch.ChannelsDataGridList", classes: "moon enyo-unselectable enyo-fit"},
+            {kind: "moon.Spinner", content: "Loading...", center: true},
+        ]},        
+    ],
+    // itemSelected: function(inSender, inEvent) {
+    //     this.doGameSelected({ game: inEvent.model });
+    // }
 });

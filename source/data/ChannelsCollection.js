@@ -1,10 +1,10 @@
 /* global enyo */
 
 enyo.kind({
-    name: "twitch.StreamsCollection",
+    name: "twitch.ChannelsCollection",
     kind: "twitch.TwitchRemoteCollection",
-    model: "twitch.StreamModel",
-    url: "streams",
+    model: "twitch.ChannelModel",    
+    url: "streams",    
     parse: function(data) {
         return data && data.streams;
     },

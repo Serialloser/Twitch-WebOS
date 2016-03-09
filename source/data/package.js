@@ -1,8 +1,8 @@
 enyo.depends(
 	"TwitchApiSource.js",
   "TwitchRemoteCollection.js",
+  "ChannelModel.js",
+  "ChannelsCollection.js",
   "GameModel.js",
-  "GamesCollection.js",
-  "StreamModel.js",
-  "StreamsCollection.js"
+  "GamesCollection.js"
 );
